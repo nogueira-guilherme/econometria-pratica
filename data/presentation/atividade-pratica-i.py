@@ -13,14 +13,14 @@ import datetime as date
 import matplotlib.pyplot as plt
 import statsmodels.formula.api as smf
 
-import Functions.Colors as color
+import functions.colors as color
 
 """""""""""""""""""""""""""""""""
        PROGRAMA PRINCIPAL
 """""""""""""""""""""""""""""""""
 
 # SELECIONANDO DIRETÓRIO
-os.chdir('D:\\Programing\\python\\econometria\\1-7-atividade-pratica\\Data')
+os.chdir('D:\\Programing\\python\\econometria\\1-7-atividade-pratica\\data')
 
 # IMPORTANDO OS DADOS
 df_estudantes = pd.read_excel("dados.xlsx")
@@ -74,7 +74,7 @@ for cont in range(0, len(idade_y)):
     idade_fig = plt.text(cont, idade_y[cont], idade_y[cont], ha="center", va="bottom", color='black')
 
 # Salvar imagem e mostrar
-idade_fig = plt.savefig("Images\\idade.png", transparent=True)
+idade_fig = plt.savefig("images\\idade.png", transparent=True)
 idade_fig = plt.show()
 
 
@@ -102,7 +102,7 @@ sexo_fig = plt.pie(x=sexo_x, autopct='%.1f%%', explode=sexo_explode, shadow=True
 sexo_fig = plt.title('Sexo dos Estudantes de Econometria 1', fontsize=18, color="black")
 
 # Salvar imagem e mostrar
-sexo_fig = plt.savefig("Images\\sexo.png", transparent=True)
+sexo_fig = plt.savefig("images\\sexo.png", transparent=True)
 sexo_fig = plt.show()
 
 
@@ -131,7 +131,7 @@ time_fig = plt.pie(x=time_x, autopct='%.1f%%', labels=time_label, shadow=False, 
 time_fig = plt.title('Time dos Estudantes de Econometria 1', fontsize=18, color="black")
 
 # Salvar imagem e mostrar
-time_fig = plt.savefig("Images\\time.png", transparent=True)
+time_fig = plt.savefig("images\\time.png", transparent=True)
 time_fig = plt.show()
 
 
@@ -165,7 +165,7 @@ computador_fig = plt.annotate(f"{pc_computador.quantidade[0]*100:.2f}%", xy=(2,'
 computador_fig = plt.annotate(f"{pc_computador.quantidade[1]*100:.2f}%", xy=(31,'Sim'), ha="right", va="center", color='white')
 
 # Salvar imagem e mostrar
-computador_fig = plt.savefig("Images\\computador_pessoal.png", transparent=True)
+computador_fig = plt.savefig("images\\computador_pessoal.png", transparent=True)
 computador_fig = plt.show()
 
 
@@ -189,7 +189,7 @@ reprovacao_fig = plt.ylabel('Número de reprovações', color='white')
 reprovacao_fig = plt.xlabel('Identificação do estudante', color='white')
 
 # Salvar imagem e mostrar
-reprovacao_fig = plt.savefig("Images\\reprovacao.png", transparent=True)
+reprovacao_fig = plt.savefig("images\\reprovacao.png", transparent=True)
 reprovacao_fig = plt.show()
 
 
@@ -226,7 +226,7 @@ for cont in range(0, len(satisfacao_y)):
     satisfacao_fig = plt.text(cont, satisfacao_y[cont+1], f"{satisfacao_yp[cont+1]:.2f}%", ha="center", va="bottom", color='white')
 
 # Salvar imagem e mostrar
-satisfacao_fig = plt.savefig("Images\\satisfacao.png", transparent=True)
+satisfacao_fig = plt.savefig("images\\satisfacao.png", transparent=True)
 satisfacao_fig = plt.show()
 
 
@@ -265,7 +265,7 @@ for cont in range(0, len(expectativa_y)):
     expectativa_fig = plt.text(cont, expectativa_y[cont+1], f"{expectativa_yp[cont+1]:.2f}%", ha="center", va="bottom", color='white')
 
 # Salvar imagem e mostrar
-expectativa_fig = plt.savefig("Images\\expectativa.png", transparent=True)
+expectativa_fig = plt.savefig("images\\expectativa.png", transparent=True)
 expectativa_fig = plt.show()
 
 
@@ -305,7 +305,7 @@ for cont in range(0, len(tempo_redes_y)):
     tempo_redes_fig = plt.annotate(f"{tempo_redes_x[posicao]:.1f}%", xy=(tempo_redes_x[posicao], tempo_redes_y[cont]), ha="right", va="center", color='white')
 
 # Salvar imagem e mostrar
-tempo_redes_fig = plt.savefig("Images\\tempo_redes.png", transparent=True)
+tempo_redes_fig = plt.savefig("images\\tempo_redes.png", transparent=True)
 tempo_redes_fig = plt.show()
 
 
@@ -330,7 +330,7 @@ enem_fig = plt.ylabel('Nota no ENEM', color='white')
 enem_fig = plt.xlabel('Identificação do estudante', color='white')
 
 # Salvar imagem e mostrar
-computador_fig = plt.savefig("Images\\enem.png", transparent=True)
+computador_fig = plt.savefig("images\\enem.png", transparent=True)
 enem_fig = plt.show()
 
 
@@ -379,7 +379,7 @@ regressao_fig = plt.xlabel('Idade dos estudantes', color='black')
 regressao_fig = plt.title('ln(tempo_redes) = 1,8109 − 0,0362X', color='black')
 
 # Salvar imagem e mostrar
-regressao_fig = plt.savefig("Images\\regressao_teste.png", transparent=True)
+regressao_fig = plt.savefig("images\\regressao_teste.png", transparent=True)
 regressao_fig = plt.show()
 
 # Alfa = 1,8109
