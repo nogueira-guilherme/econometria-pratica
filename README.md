@@ -1,4 +1,4 @@
-# econometria-pratica-i
+# econometria-pratica
 
 Atividade Prática 1 - Disciplina de Econometria
 
